@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinnema | Formulario de Contacto</title>
+</head>
+
+<body background="fondo_morado_negro.png" bgcolor="#1E1045" text="#FFE97A">
+
+ <title>Galería · Cinemma</title>
+</head>
+<body>
+    <center>
+
+<h1>Galería Cinemma</h1>
+<p>Haz clic en la cartelera de tu interés.</p>
+
+<!-- Filtros: cada botón muestra solo una categoría -->
+<p id="filtros">
+  <button data-cat="todas">Todas</button>
+  <button data-cat="estrenos">Estrenos</button>
+  <button data-cat="clasicos">Clásicos</button>
+  <button data-cat="eventos">Eventos</button>
+</p>
+
+<!-- Galería: cada <figure> es una imagen. Cambia src, alt, data-cat y el texto -->
+<div id="galeria">
+  <figure data-cat="estrenos">
+    <img src="residen.png" alt="Noche de estreno" width="200">
+    <figcaption>Noche de estreno</figcaption>
+  </figure>
+
+  <figure data-cat="clasicos">
+    <img src="gato.jpg" alt="Clásicos en pantalla" width="200">
+    <figcaption>Clásicos en pantalla</figcaption>
+  </figure>
+
+  <figure data-cat="eventos">
+    <img src="images (1).jpg" alt="Cine al aire libre" width="200">
+    <figcaption>Cine al aire libre</figcaption>
+  </figure>
+
+  <figure data-cat="estrenos">
+    <img src="images.jpg" alt="Estreno nacional" width="200">
+    <figcaption>Estreno nacional</figcaption>
+  </figure>
+</div>
+
+<!-- Visor: el elemento <dialog> ya trae su propio comportamiento sin CSS -->
+<dialog id="visor">
+  <img id="grande" src="" alt="">
+  <p id="titulo"></p>
+  <button id="cerrar">Cerrar</button>
+</dialog>
+
+ <!-- PIE DE PAGINA -->
+    <footer>
+        <p>Todos los derechos reservados</p>
+        <p>© 2026</p>
+        
+    </footer>
+
+
+    </center>
+
+<script>
+  const figuras = document.querySelectorAll("#galeria figure");
+  const visor = document.getElementById("visor");
+
+  // Filtrar por categoría usando el atributo "hidden" (sin CSS)
+  document.querySelectorAll("#filtros button").forEach(boton => {
+    boton.addEventListener("click", () => {
+      const cat = boton.dataset.cat;
+      figuras.forEach(f => { f.hidden = cat !== "todas" && f.dataset.cat !== cat; });
+    });
+  });
+
+  // Abrir la imagen en grande
+  figuras.forEach(f => {
+    const img = f.querySelector("img");
+    img.addEventListener("click", () => {
+      document.getElementById("grande").src = img.src;
+      document.getElementById("grande").alt = img.alt;
+      document.getElementById("grande").width = 500;
+      document.getElementById("titulo").textContent = img.alt;
+      visor.showModal();
+    });
+  });
+
+  document.getElementById("cerrar").addEventListener("click", () => visor.close());
+</script>
+</body>
+</html>
+    
+</body>
+</html>
