@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión - Cinema</title>
+
+    <style>
+
+        body {
+            background-color: #17132B;
+            color: #F8F7FF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .contenedor {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .formulario {
+            background-color: #292442;
+            width: 350px;
+            padding: 25px;
+            border: 1px solid #6C3CE9;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #6C3CE9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .enlaces {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #00B4D8;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>CINEMA</h1>
+        <p>Bienvenido a nuestra página</p>
+
+        <div class="formulario">
+
+            <h2>Iniciar sesión</h2>
+
+            <form>
+
+                <label>Usuario o correo electrónico:</label>
+                <input type="text" placeholder="Escribe tu usuario o correo" required>
+
+                <label>Contraseña:</label>
+                <input type="password" placeholder="Escribe tu contraseña" required>
+
+                <button type="submit">Iniciar sesión</button>
+
+            </form>
+
+            <div class="enlaces">
+
+                <a href="#">Cambiar contraseña</a>
+
+                <a href="registro.html">Crear cuenta</a>
+
+            </div>
+
+        </div>
+
+        <h3>¡Bienvenido!</h3>
+        <p>Disfruta de nuestra experiencia de cine.</p>
+
+    </div>
+
+</body>
+</html>
