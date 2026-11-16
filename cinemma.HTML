@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,211 +8,296 @@
     <title>CINEMMA</title>
 </head>
 
+<style>
+    .carrusel {
+        width: 100%;
+        overflow: hidden;
+        padding: 15px 0;
+    }
+
+    .fila-peliculas {
+        display: flex;
+        width: max-content;
+        margin: 15px 0;
+        animation: mover-izquierda 35s linear infinite;
+    }
+
+    .fila-peliculas.derecha {
+        animation-name: mover-derecha;
+        animation-duration: 40s;
+    }
+
+    .fila-peliculas.lenta {
+        animation-duration: 50s;
+    }
+
+    .fila-peliculas img {
+        width: 180px;
+        height: 260px;
+        object-fit: cover;
+        margin: 0 12px;
+        border-radius: 12px;
+        transition: transform 0.4s;
+    }
+
+    .fila-peliculas img:hover {
+        transform: scale(1.12);
+    }
+
+    @keyframes mover-izquierda {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes mover-derecha {
+        from {
+            transform: translateX(-50%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+</style>
+
 <body background="fondo.jpg.png" text="white"
       link="white" vlink="white" alink="white">
 
     <!-- ENCABEZADO -->
 
-<header>
+    <header>
 
-    <table>
-        <tr>
-            <td>
-                <img src="logo.jpg.png" width="90">
-            </td>
-            <td>
-                <font color="white" size="5">
-                    <h1>CINEMMA</h1>
-                </font>
-            </td>
-        </tr>
-    </table>
-
-    <!-- MENU -->
-    <nav>
-        <table width="100%" bgcolor="black">
+        <table>
             <tr>
-                <td height="65" align="right">
+                <td>
+                    <img src="logo.jpg.png" width="90">
+                </td>
+                <td>
                     <font color="white" size="5">
-                        <a href="#inicio">Inicio</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="#sobre">Sobre nosotros</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="#nosotros">Nosotros</a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href="#contacto">Contacto</a>
-                        &nbsp;&nbsp;&nbsp;
+                        <h1>CINEMMA</h1>
                     </font>
                 </td>
             </tr>
         </table>
-    </nav>
 
-    <hr>
+        <!-- MENU -->
+        <nav>
+            <table width="100%" bgcolor="black">
+                <tr>
+                    <td height="65" align="right">
+                        <font color="white" size="5">
+                            <a href="#inicio">Inicio</a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="#sobre">Sobre nosotros</a>
+                            &nbsp;&nbsp;&nbsp;
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </nav>
 
-</header>
+        <hr>
 
     </header>
 
-    <!-- INICIO -->
-    <section id="inicio">
+<!-- INICIO -->
+<section id="inicio">
 
-        <table width="100%">
-            <tr>
-                <td align="center">
-                    <img src="imagen1.jpg.jpg" width="200">
-                    <img src="imagen2.jpg.jpg" width="200">
-                    <img src="imagen3.jpg.jpg" width="200">
-                    <img src="imagen4.jpg.jpg" width="200">
-                    <img src="imagen5.jpg.jpg" width="200">
-                    <img src="imagen6.jpg.jpg" width="200">
-                    <img src="imagen7.jpg.jpg" width="200">
-                </td>
+    <div class="carrusel">
 
-                <td align="center">
-                    <img src="imagen10.jpg.jpg" width="200">
-                    <img src="imagen11.jpg.jpg" width="200">
-                    <img src="imagen12.jpg.jpg" width="200">
-                    <img src="imagen13.jpg.jpg" width="200">
-                    <img src="imagen14.jpg.jpg" width="200">
-                    <img src="imagen15.jpg.jpg" width="200">
-                    <img src="imagen16.jpg.jpg" width="200">
-                </td>
+        <!-- PRIMERA FILA: izquierda -->
+        <div class="fila-peliculas">
+            <img src="imagen1.jpg.jpg">
+            <img src="imagen2.jpg.jpg">
+            <img src="imagen3.jpg.jpg">
+            <img src="imagen4.jpg.jpg">
+            <img src="imagen5.jpg.jpg">
+            <img src="imagen6.jpg.jpg">
+            <img src="imagen7.jpg.jpg">
+            <img src="imagen10.jpg.jpg">
+            <img src="imagen11.jpg.jpg">
+            <img src="imagen12.jpg.jpg">
+            <img src="imagen13.jpg.jpg">
+            <img src="imagen14.jpg.jpg">
+            <img src="imagen15.jpg.jpg">
+            <img src="imagen16.jpg.jpg">
+            <img src="imagen17.jpg.jpg">
+            <img src="imagen18.jpg.jpg">
+            <img src="imagen20.jpg.jpg">
+            <img src="imagen21.jpg.jpg">
+            <img src="imagen23.jpg.jpg">
+            <img src="imagen8.jpg.jpg">
+            <img src="imagen9.jpg.jpg">
 
-                <td align="center">
-                    <img src="imagen17.jpg.jpg" width="200">
-                    <img src="imagen18.jpg.jpg" width="200">
-                    <img src="imagen20.jpg.jpg" width="200">
-                    <img src="imagen21.jpg.jpg" width="200">
-                    <img src="imagen23.jpg.jpg" width="200">
-                    <img src="imagen8.jpg.jpg" width="200">
-                    <img src="imagen9.jpg.jpg" width="200">
-                </td>
-            </tr>
-        </table>
+            <!-- Repetición -->
+            <img src="imagen1.jpg.jpg">
+            <img src="imagen2.jpg.jpg">
+            <img src="imagen3.jpg.jpg">
+            <img src="imagen4.jpg.jpg">
+            <img src="imagen5.jpg.jpg">
+            <img src="imagen6.jpg.jpg">
+            <img src="imagen7.jpg.jpg">
+            <img src="imagen10.jpg.jpg">
+            <img src="imagen11.jpg.jpg">
+            <img src="imagen12.jpg.jpg">
+            <img src="imagen13.jpg.jpg">
+            <img src="imagen14.jpg.jpg">
+            <img src="imagen15.jpg.jpg">
+            <img src="imagen16.jpg.jpg">
+            <img src="imagen17.jpg.jpg">
+            <img src="imagen18.jpg.jpg">
+            <img src="imagen20.jpg.jpg">
+            <img src="imagen21.jpg.jpg">
+            <img src="imagen23.jpg.jpg">
+            <img src="imagen8.jpg.jpg">
+            <img src="imagen9.jpg.jpg">
+        </div>
 
-    </section>
+        <!-- SEGUNDA FILA: derecha -->
+        <div class="fila-peliculas derecha">
+            <img src="imagen9.jpg.jpg">
+            <img src="imagen8.jpg.jpg">
+            <img src="imagen23.jpg.jpg">
+            <img src="imagen21.jpg.jpg">
+            <img src="imagen20.jpg.jpg">
+            <img src="imagen18.jpg.jpg">
+            <img src="imagen17.jpg.jpg">
+            <img src="imagen16.jpg.jpg">
+            <img src="imagen15.jpg.jpg">
+            <img src="imagen14.jpg.jpg">
+            <img src="imagen13.jpg.jpg">
+            <img src="imagen12.jpg.jpg">
+            <img src="imagen11.jpg.jpg">
+            <img src="imagen10.jpg.jpg">
+            <img src="imagen7.jpg.jpg">
+            <img src="imagen6.jpg.jpg">
+            <img src="imagen5.jpg.jpg">
+            <img src="imagen4.jpg.jpg">
+            <img src="imagen3.jpg.jpg">
+            <img src="imagen2.jpg.jpg">
+            <img src="imagen1.jpg.jpg">
 
-    <hr>
+            <!-- Repetición -->
+            <img src="imagen9.jpg.jpg">
+            <img src="imagen8.jpg.jpg">
+            <img src="imagen23.jpg.jpg">
+            <img src="imagen21.jpg.jpg">
+            <img src="imagen20.jpg.jpg">
+            <img src="imagen18.jpg.jpg">
+            <img src="imagen17.jpg.jpg">
+            <img src="imagen16.jpg.jpg">
+            <img src="imagen15.jpg.jpg">
+            <img src="imagen14.jpg.jpg">
+            <img src="imagen13.jpg.jpg">
+            <img src="imagen12.jpg.jpg">
+            <img src="imagen11.jpg.jpg">
+            <img src="imagen10.jpg.jpg">
+            <img src="imagen7.jpg.jpg">
+            <img src="imagen6.jpg.jpg">
+            <img src="imagen5.jpg.jpg">
+            <img src="imagen4.jpg.jpg">
+            <img src="imagen3.jpg.jpg">
+            <img src="imagen2.jpg.jpg">
+            <img src="imagen1.jpg.jpg">
+        </div>
+
+        <!-- TERCERA FILA: izquierda, más lenta -->
+        <div class="fila-peliculas lenta">
+            <img src="imagen4.jpg.jpg">
+            <img src="imagen5.jpg.jpg">
+            <img src="imagen6.jpg.jpg">
+            <img src="imagen7.jpg.jpg">
+            <img src="imagen10.jpg.jpg">
+            <img src="imagen11.jpg.jpg">
+            <img src="imagen12.jpg.jpg">
+            <img src="imagen13.jpg.jpg">
+            <img src="imagen14.jpg.jpg">
+            <img src="imagen15.jpg.jpg">
+            <img src="imagen16.jpg.jpg">
+            <img src="imagen17.jpg.jpg">
+            <img src="imagen18.jpg.jpg">
+            <img src="imagen20.jpg.jpg">
+            <img src="imagen21.jpg.jpg">
+            <img src="imagen23.jpg.jpg">
+            <img src="imagen8.jpg.jpg">
+            <img src="imagen9.jpg.jpg">
+            <img src="imagen1.jpg.jpg">
+            <img src="imagen2.jpg.jpg">
+            <img src="imagen3.jpg.jpg">
+
+            <!-- Repetición -->
+            <img src="imagen4.jpg.jpg">
+            <img src="imagen5.jpg.jpg">
+            <img src="imagen6.jpg.jpg">
+            <img src="imagen7.jpg.jpg">
+            <img src="imagen10.jpg.jpg">
+            <img src="imagen11.jpg.jpg">
+            <img src="imagen12.jpg.jpg">
+            <img src="imagen13.jpg.jpg">
+            <img src="imagen14.jpg.jpg">
+            <img src="imagen15.jpg.jpg">
+            <img src="imagen16.jpg.jpg">
+            <img src="imagen17.jpg.jpg">
+            <img src="imagen18.jpg.jpg">
+            <img src="imagen20.jpg.jpg">
+            <img src="imagen21.jpg.jpg">
+            <img src="imagen23.jpg.jpg">
+            <img src="imagen8.jpg.jpg">
+            <img src="imagen9.jpg.jpg">
+            <img src="imagen1.jpg.jpg">
+            <img src="imagen2.jpg.jpg">
+            <img src="imagen3.jpg.jpg">
+        </div>
+
+    </div>
+</section>
+
 
     <!-- SOBRE NOSOTROS -->
     <section id="sobre">
 
+    <hr>
         <h2>Sobre nosotros</h2>
-
-        <table>
+        <hr>
+    
+        <table width="100%">
             <tr>
-                <td width="60%">
 
-                    <font color="white" size="5">
+                <td width="60%" align="left">
+
+                    <font color="white" size="4">
                         <p>
-                            En CINEMMA creemos que el cine es mucho más que imágenes
-                            proyectadas en una pantalla; es una forma de viajar a otros
-                            mundos, conocer historias increíbles y experimentar emociones
-                            que permanecen con nosotros incluso después de que termina
-                            una película.
+                            En CINEMMA queremos ofrecer un espacio de entretenimiento
+                            donde las personas puedan disfrutar de sus películas y
+                            series favoritas, descubrir nuevas historias y compartir
+                            momentos especiales con sus seres queridos.
 
-                            Somos un espacio creado para los amantes del séptimo arte,
-                            donde cada persona puede descubrir nuevas películas,
-                            explorar diferentes géneros y encontrar historias que se
-                            adapten a sus gustos. Desde emocionantes aventuras y mundos
-                            de fantasía hasta historias románticas, comedias, misterios
-                            y películas de terror, queremos reunir una gran variedad de
-                            opciones para que siempre exista algo nuevo por descubrir.
+                            Nuestro propósito es brindar una experiencia agradable
+                            y divertida, en la que cada visitante pueda encontrar
+                            opciones para todos los gustos y disfrutar del maravilloso
+                            mundo del cine.
 
-                            Nuestra idea nace de la pasión por el entretenimiento y de
-                            la curiosidad por conocer historias diferentes. Sabemos que
-                            cada película tiene algo especial: personajes que nos
-                            inspiran, escenas que nos sorprenden y momentos que nos
-                            hacen reír, llorar o reflexionar. Por eso, queremos que
-                            CINEMMA sea un lugar donde la imaginación no tenga límites
-                            y donde cada visita pueda convertirse en una nueva
-                            experiencia.
-
-                            Más que una página de películas, queremos construir un
-                            espacio para compartir el gusto por el cine, descubrir
-                            nuevas recomendaciones y disfrutar de la magia que existe
-                            detrás de cada historia.
+                            Creemos que una película es mucho más que una historia
+                            en pantalla, es una oportunidad para emocionarnos,
+                            reír, aprender y crear recuerdos. Por eso, queremos
+                            que CINEMMA sea un lugar donde la diversión y la
+                            imaginación nunca terminen.
                         </p>
                     </font>
 
                 </td>
 
-                <td>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td width="40%" align="center">
                     <img src="imagen24.jpg.jpg" width="350">
                 </td>
+
             </tr>
         </table>
 
     </section>
-
-    <hr>
-
-    <!-- NOSOTROS -->
-    <section id="nosotros">
-
-        <h2>Nuestro equipo de trabajo</h2>
-
-        <table width="100%">
-            <tr>
-                <td align="center">
-
-                    <img src="imagen25.jpg.png" width="500">
-
-                    <br><br>
-
-                    <font color="white" size="4">
-                        Arianny
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        Camilo
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        Gerly
-                    </font>
-
-                </td>
-            </tr>
-        </table>
-
-    </section>
-
-    <hr>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-
-    <h2>Contacto</h2>
-
-    <font color="white" size="4">
-
-        <p>
-            Instagram:
-            <a href="https://www.instagram.com/" target="_blank">Visítanos aquí</a>
-        </p>
-
-        <p>
-            Facebook:
-            <a href="https://www.facebook.com/" target="_blank">Visítanos aquí</a>
-        </p>
-
-        <p>
-            TikTok:
-            <a href="https://www.tiktok.com/" target="_blank">Visítanos aquí</a>
-        </p>
-
-        <p>
-            YouTube:
-            <a href="https://www.youtube.com/" target="_blank">Visítanos aquí</a>
-        </p>
-
-        <p>
-          Correo electrónico:
-<a href="mailto:cinemma@gmail.com">cinemma@gmail.com</a>
-        </p>
-
-    </font>
-
-</section>
 
 </body>
 </html>
