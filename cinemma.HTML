@@ -6,64 +6,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CINEMMA</title>
+
+    <style>
+        .carrusel {
+            width: 100%;
+            overflow: hidden;
+            padding: 15px 0;
+        }
+
+        .fila-peliculas {
+            display: flex;
+            width: max-content;
+            margin: 15px 0;
+            animation: mover-izquierda 35s linear infinite;
+        }
+
+        .fila-peliculas.derecha {
+            animation-name: mover-derecha;
+            animation-duration: 40s;
+        }
+
+        .fila-peliculas.lenta {
+            animation-duration: 50s;
+        }
+
+        .fila-peliculas img {
+            width: 180px;
+            height: 260px;
+            object-fit: cover;
+            margin: 0 12px;
+            border-radius: 12px;
+            transition: transform 0.4s;
+        }
+
+        .fila-peliculas img:hover {
+            transform: scale(1.12);
+        }
+
+        @keyframes mover-izquierda {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes mover-derecha {
+            from {
+                transform: translateX(-50%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* TIPO DE LETRA DE INICIO Y SOBRE NOSOTROS */
+
+        #inicio {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #sobre {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #inicio h2,
+        #sobre h2 {
+            font-weight: bold;
+        }
+
+        #sobre p {
+            font-weight: normal;
+        }
+    </style>
+
 </head>
 
-<style>
-    .carrusel {
-        width: 100%;
-        overflow: hidden;
-        padding: 15px 0;
-    }
-
-    .fila-peliculas {
-        display: flex;
-        width: max-content;
-        margin: 15px 0;
-        animation: mover-izquierda 35s linear infinite;
-    }
-
-    .fila-peliculas.derecha {
-        animation-name: mover-derecha;
-        animation-duration: 40s;
-    }
-
-    .fila-peliculas.lenta {
-        animation-duration: 50s;
-    }
-
-    .fila-peliculas img {
-        width: 180px;
-        height: 260px;
-        object-fit: cover;
-        margin: 0 12px;
-        border-radius: 12px;
-        transition: transform 0.4s;
-    }
-
-    .fila-peliculas img:hover {
-        transform: scale(1.12);
-    }
-
-    @keyframes mover-izquierda {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-50%);
-        }
-    }
-
-    @keyframes mover-derecha {
-        from {
-            transform: translateX(-50%);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
-</style>
-
-<body background="fondo.jpg.png" text="white"
+<body background="fondo.4.jpg" text="white"
       link="white" vlink="white" alink="white">
 
     <!-- ENCABEZADO -->
@@ -103,166 +123,165 @@
 
     </header>
 
-<!-- INICIO -->
-<section id="inicio">
+    <!-- INICIO -->
+    <section id="inicio">
 
-    <div class="carrusel">
+        <div class="carrusel">
 
-        <!-- PRIMERA FILA: izquierda -->
-        <div class="fila-peliculas">
-            <img src="imagen1.jpg.jpg">
-            <img src="imagen2.jpg.jpg">
-            <img src="imagen3.jpg.jpg">
-            <img src="imagen4.jpg.jpg">
-            <img src="imagen5.jpg.jpg">
-            <img src="imagen6.jpg.jpg">
-            <img src="imagen7.jpg.jpg">
-            <img src="imagen10.jpg.jpg">
-            <img src="imagen11.jpg.jpg">
-            <img src="imagen12.jpg.jpg">
-            <img src="imagen13.jpg.jpg">
-            <img src="imagen14.jpg.jpg">
-            <img src="imagen15.jpg.jpg">
-            <img src="imagen16.jpg.jpg">
-            <img src="imagen17.jpg.jpg">
-            <img src="imagen18.jpg.jpg">
-            <img src="imagen20.jpg.jpg">
-            <img src="imagen21.jpg.jpg">
-            <img src="imagen23.jpg.jpg">
-            <img src="imagen8.jpg.jpg">
-            <img src="imagen9.jpg.jpg">
+            <!-- PRIMERA FILA: izquierda -->
+            <div class="fila-peliculas">
+                <img src="imagen1.jpg.jpg">
+                <img src="imagen2.jpg.jpg">
+                <img src="imagen3.jpg.jpg">
+                <img src="imagen4.jpg.jpg">
+                <img src="imagen5.jpg.jpg">
+                <img src="imagen6.jpg.jpg">
+                <img src="imagen7.jpg.jpg">
+                <img src="imagen10.jpg.jpg">
+                <img src="imagen11.jpg.jpg">
+                <img src="imagen12.jpg.jpg">
+                <img src="imagen13.jpg.jpg">
+                <img src="imagen14.jpg.jpg">
+                <img src="imagen15.jpg.jpg">
+                <img src="imagen16.jpg.jpg">
+                <img src="imagen17.jpg.jpg">
+                <img src="imagen18.jpg.jpg">
+                <img src="imagen20.jpg.jpg">
+                <img src="imagen21.jpg.jpg">
+                <img src="imagen23.jpg.jpg">
+                <img src="imagen8.jpg.jpg">
+                <img src="imagen9.jpg.jpg">
 
-            <!-- Repetición -->
-            <img src="imagen1.jpg.jpg">
-            <img src="imagen2.jpg.jpg">
-            <img src="imagen3.jpg.jpg">
-            <img src="imagen4.jpg.jpg">
-            <img src="imagen5.jpg.jpg">
-            <img src="imagen6.jpg.jpg">
-            <img src="imagen7.jpg.jpg">
-            <img src="imagen10.jpg.jpg">
-            <img src="imagen11.jpg.jpg">
-            <img src="imagen12.jpg.jpg">
-            <img src="imagen13.jpg.jpg">
-            <img src="imagen14.jpg.jpg">
-            <img src="imagen15.jpg.jpg">
-            <img src="imagen16.jpg.jpg">
-            <img src="imagen17.jpg.jpg">
-            <img src="imagen18.jpg.jpg">
-            <img src="imagen20.jpg.jpg">
-            <img src="imagen21.jpg.jpg">
-            <img src="imagen23.jpg.jpg">
-            <img src="imagen8.jpg.jpg">
-            <img src="imagen9.jpg.jpg">
+                <!-- Repetición -->
+                <img src="imagen1.jpg.jpg">
+                <img src="imagen2.jpg.jpg">
+                <img src="imagen3.jpg.jpg">
+                <img src="imagen4.jpg.jpg">
+                <img src="imagen5.jpg.jpg">
+                <img src="imagen6.jpg.jpg">
+                <img src="imagen7.jpg.jpg">
+                <img src="imagen10.jpg.jpg">
+                <img src="imagen11.jpg.jpg">
+                <img src="imagen12.jpg.jpg">
+                <img src="imagen13.jpg.jpg">
+                <img src="imagen14.jpg.jpg">
+                <img src="imagen15.jpg.jpg">
+                <img src="imagen16.jpg.jpg">
+                <img src="imagen17.jpg.jpg">
+                <img src="imagen18.jpg.jpg">
+                <img src="imagen20.jpg.jpg">
+                <img src="imagen21.jpg.jpg">
+                <img src="imagen23.jpg.jpg">
+                <img src="imagen8.jpg.jpg">
+                <img src="imagen9.jpg.jpg">
+            </div>
+
+            <!-- SEGUNDA FILA: derecha -->
+            <div class="fila-peliculas derecha">
+                <img src="imagen9.jpg.jpg">
+                <img src="imagen8.jpg.jpg">
+                <img src="imagen23.jpg.jpg">
+                <img src="imagen21.jpg.jpg">
+                <img src="imagen20.jpg.jpg">
+                <img src="imagen18.jpg.jpg">
+                <img src="imagen17.jpg.jpg">
+                <img src="imagen16.jpg.jpg">
+                <img src="imagen15.jpg.jpg">
+                <img src="imagen14.jpg.jpg">
+                <img src="imagen13.jpg.jpg">
+                <img src="imagen12.jpg.jpg">
+                <img src="imagen11.jpg.jpg">
+                <img src="imagen10.jpg.jpg">
+                <img src="imagen7.jpg.jpg">
+                <img src="imagen6.jpg.jpg">
+                <img src="imagen5.jpg.jpg">
+                <img src="imagen4.jpg.jpg">
+                <img src="imagen3.jpg.jpg">
+                <img src="imagen2.jpg.jpg">
+                <img src="imagen1.jpg.jpg">
+
+                <!-- Repetición -->
+                <img src="imagen9.jpg.jpg">
+                <img src="imagen8.jpg.jpg">
+                <img src="imagen23.jpg.jpg">
+                <img src="imagen21.jpg.jpg">
+                <img src="imagen20.jpg.jpg">
+                <img src="imagen18.jpg.jpg">
+                <img src="imagen17.jpg.jpg">
+                <img src="imagen16.jpg.jpg">
+                <img src="imagen15.jpg.jpg">
+                <img src="imagen14.jpg.jpg">
+                <img src="imagen13.jpg.jpg">
+                <img src="imagen12.jpg.jpg">
+                <img src="imagen11.jpg.jpg">
+                <img src="imagen10.jpg.jpg">
+                <img src="imagen7.jpg.jpg">
+                <img src="imagen6.jpg.jpg">
+                <img src="imagen5.jpg.jpg">
+                <img src="imagen4.jpg.jpg">
+                <img src="imagen3.jpg.jpg">
+                <img src="imagen2.jpg.jpg">
+                <img src="imagen1.jpg.jpg">
+            </div>
+
+            <!-- TERCERA FILA: izquierda, más lenta -->
+            <div class="fila-peliculas lenta">
+                <img src="imagen4.jpg.jpg">
+                <img src="imagen5.jpg.jpg">
+                <img src="imagen6.jpg.jpg">
+                <img src="imagen7.jpg.jpg">
+                <img src="imagen10.jpg.jpg">
+                <img src="imagen11.jpg.jpg">
+                <img src="imagen12.jpg.jpg">
+                <img src="imagen13.jpg.jpg">
+                <img src="imagen14.jpg.jpg">
+                <img src="imagen15.jpg.jpg">
+                <img src="imagen16.jpg.jpg">
+                <img src="imagen17.jpg.jpg">
+                <img src="imagen18.jpg.jpg">
+                <img src="imagen20.jpg.jpg">
+                <img src="imagen21.jpg.jpg">
+                <img src="imagen23.jpg.jpg">
+                <img src="imagen8.jpg.jpg">
+                <img src="imagen9.jpg.jpg">
+                <img src="imagen1.jpg.jpg">
+                <img src="imagen2.jpg.jpg">
+                <img src="imagen3.jpg.jpg">
+
+                <!-- Repetición -->
+                <img src="imagen4.jpg.jpg">
+                <img src="imagen5.jpg.jpg">
+                <img src="imagen6.jpg.jpg">
+                <img src="imagen7.jpg.jpg">
+                <img src="imagen10.jpg.jpg">
+                <img src="imagen11.jpg.jpg">
+                <img src="imagen12.jpg.jpg">
+                <img src="imagen13.jpg.jpg">
+                <img src="imagen14.jpg.jpg">
+                <img src="imagen15.jpg.jpg">
+                <img src="imagen16.jpg.jpg">
+                <img src="imagen17.jpg.jpg">
+                <img src="imagen18.jpg.jpg">
+                <img src="imagen20.jpg.jpg">
+                <img src="imagen21.jpg.jpg">
+                <img src="imagen23.jpg.jpg">
+                <img src="imagen8.jpg.jpg">
+                <img src="imagen9.jpg.jpg">
+                <img src="imagen1.jpg.jpg">
+                <img src="imagen2.jpg.jpg">
+                <img src="imagen3.jpg.jpg">
+            </div>
+
         </div>
-
-        <!-- SEGUNDA FILA: derecha -->
-        <div class="fila-peliculas derecha">
-            <img src="imagen9.jpg.jpg">
-            <img src="imagen8.jpg.jpg">
-            <img src="imagen23.jpg.jpg">
-            <img src="imagen21.jpg.jpg">
-            <img src="imagen20.jpg.jpg">
-            <img src="imagen18.jpg.jpg">
-            <img src="imagen17.jpg.jpg">
-            <img src="imagen16.jpg.jpg">
-            <img src="imagen15.jpg.jpg">
-            <img src="imagen14.jpg.jpg">
-            <img src="imagen13.jpg.jpg">
-            <img src="imagen12.jpg.jpg">
-            <img src="imagen11.jpg.jpg">
-            <img src="imagen10.jpg.jpg">
-            <img src="imagen7.jpg.jpg">
-            <img src="imagen6.jpg.jpg">
-            <img src="imagen5.jpg.jpg">
-            <img src="imagen4.jpg.jpg">
-            <img src="imagen3.jpg.jpg">
-            <img src="imagen2.jpg.jpg">
-            <img src="imagen1.jpg.jpg">
-
-            <!-- Repetición -->
-            <img src="imagen9.jpg.jpg">
-            <img src="imagen8.jpg.jpg">
-            <img src="imagen23.jpg.jpg">
-            <img src="imagen21.jpg.jpg">
-            <img src="imagen20.jpg.jpg">
-            <img src="imagen18.jpg.jpg">
-            <img src="imagen17.jpg.jpg">
-            <img src="imagen16.jpg.jpg">
-            <img src="imagen15.jpg.jpg">
-            <img src="imagen14.jpg.jpg">
-            <img src="imagen13.jpg.jpg">
-            <img src="imagen12.jpg.jpg">
-            <img src="imagen11.jpg.jpg">
-            <img src="imagen10.jpg.jpg">
-            <img src="imagen7.jpg.jpg">
-            <img src="imagen6.jpg.jpg">
-            <img src="imagen5.jpg.jpg">
-            <img src="imagen4.jpg.jpg">
-            <img src="imagen3.jpg.jpg">
-            <img src="imagen2.jpg.jpg">
-            <img src="imagen1.jpg.jpg">
-        </div>
-
-        <!-- TERCERA FILA: izquierda, más lenta -->
-        <div class="fila-peliculas lenta">
-            <img src="imagen4.jpg.jpg">
-            <img src="imagen5.jpg.jpg">
-            <img src="imagen6.jpg.jpg">
-            <img src="imagen7.jpg.jpg">
-            <img src="imagen10.jpg.jpg">
-            <img src="imagen11.jpg.jpg">
-            <img src="imagen12.jpg.jpg">
-            <img src="imagen13.jpg.jpg">
-            <img src="imagen14.jpg.jpg">
-            <img src="imagen15.jpg.jpg">
-            <img src="imagen16.jpg.jpg">
-            <img src="imagen17.jpg.jpg">
-            <img src="imagen18.jpg.jpg">
-            <img src="imagen20.jpg.jpg">
-            <img src="imagen21.jpg.jpg">
-            <img src="imagen23.jpg.jpg">
-            <img src="imagen8.jpg.jpg">
-            <img src="imagen9.jpg.jpg">
-            <img src="imagen1.jpg.jpg">
-            <img src="imagen2.jpg.jpg">
-            <img src="imagen3.jpg.jpg">
-
-            <!-- Repetición -->
-            <img src="imagen4.jpg.jpg">
-            <img src="imagen5.jpg.jpg">
-            <img src="imagen6.jpg.jpg">
-            <img src="imagen7.jpg.jpg">
-            <img src="imagen10.jpg.jpg">
-            <img src="imagen11.jpg.jpg">
-            <img src="imagen12.jpg.jpg">
-            <img src="imagen13.jpg.jpg">
-            <img src="imagen14.jpg.jpg">
-            <img src="imagen15.jpg.jpg">
-            <img src="imagen16.jpg.jpg">
-            <img src="imagen17.jpg.jpg">
-            <img src="imagen18.jpg.jpg">
-            <img src="imagen20.jpg.jpg">
-            <img src="imagen21.jpg.jpg">
-            <img src="imagen23.jpg.jpg">
-            <img src="imagen8.jpg.jpg">
-            <img src="imagen9.jpg.jpg">
-            <img src="imagen1.jpg.jpg">
-            <img src="imagen2.jpg.jpg">
-            <img src="imagen3.jpg.jpg">
-        </div>
-
-    </div>
-</section>
-
+    </section>
 
     <!-- SOBRE NOSOTROS -->
     <section id="sobre">
 
-    <hr>
+        <hr>
         <h2>Sobre nosotros</h2>
         <hr>
-    
+
         <table width="100%">
             <tr>
 
