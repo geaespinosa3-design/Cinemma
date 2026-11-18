@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinemma | Formulario de Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Cinemma</h1>
+    <a class="volver" href="Galeria.html">Volver a la galería</a>
+  </header>
+
+  <main>
+    <form class="tarjeta" action="#" method="post" enctype="multipart/form-data">
+      <h2>¡Te contactamos!</h2>
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+      </div>
+
+      <div class="campo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="campo">
+        <label for="archivo">Anexa la foto de tu ticket</label>
+        <input type="file" id="archivo" name="archivo" accept="image/*">
+      </div>
+
+      <fieldset>
+        <legend>País de ubicación</legend>
+        <label class="opcion"><input type="radio" name="pais" value="Mexico" required> México</label>
+        <label class="opcion"><input type="radio" name="pais" value="Colombia"> Colombia</label>
+        <label class="opcion"><input type="radio" name="pais" value="Ecuador"> Ecuador</label>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Todos los derechos reservados</p>
+    <p>© 2026</p>
+  </footer>
+
+</body>
+</html>
